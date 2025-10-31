@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/images/logo.png" alt="Logo de Patriom" width="160"/>
-</p>
-
 **Patriom** es una aplicación de finanzas personales desarrollada en **Flutter**, pensada para ayudarte a **gestionar tu patrimonio de forma visual, sencilla y privada**.  
 Toda la información se almacena localmente en un archivo `.json`, que el usuario puede crear o importar al iniciar la app.
 
