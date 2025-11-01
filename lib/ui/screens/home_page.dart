@@ -11,16 +11,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  late Map<String, dynamic> _data;
+  void _initializeJson() async {
+    await PortfolioHistoryStorage.loadOrCreate();
+  }
 
   @override
   void initState() {
     super.initState();
     _initializeJson();
-  }
-
-  void _initializeJson() async {
-    _data = await PortfolioHistoryStorage.loadOrCreate();
   }
 
   @override
@@ -43,8 +41,6 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () async {
-                _data["balance"] += 100;
-                PortfolioHistoryStorage.overwrite(_data);
                 setState(() {});
               },
               child: AutoSizeText(sharedStrings.addAndSave(100)),
