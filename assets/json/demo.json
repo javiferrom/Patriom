@@ -1,0 +1,321 @@
+{
+  "usuario": "Usuario Demo",
+  "historial": [
+    {
+      "fecha": "2025-01-01",
+      "activos": [
+        {
+          "id": "inmueble_piso_centro",
+          "activo": true,
+          "corriente": false,
+          "entidad": "Piso en Calle Mayor",
+          "importe": 150000.00,
+          "divisa": "EUR",
+          "descripcion": "Valor estimado de mercado"
+        },
+        {
+          "id": "fondo_rf_global",
+          "activo": true,
+          "corriente": false,
+          "entidad": "Fondo Renta Fija Global",
+          "importe": 8600.00,
+          "divisa": "EUR",
+          "descripcion": "Fondo de renta fija"
+        },
+        {
+          "id": "fondo_rv_usa",
+          "activo": true,
+          "corriente": false,
+          "entidad": "Fondo Renta Variable USA",
+          "importe": 12150.00,
+          "divisa": "EUR",
+          "descripcion": "Indexado al S&P 500"
+        },
+        {
+          "id": "efectivo_cuenta",
+          "activo": true,
+          "corriente": true,
+          "entidad": "Cuenta bancaria",
+          "importe": 4500.00,
+          "divisa": "EUR",
+          "descripcion": "Liquidez disponible"
+        },
+        {
+          "id": "vehiculo_coche",
+          "activo": true,
+          "corriente": false,
+          "entidad": "Toyota Yaris 2018",
+          "importe": 9200.00,
+          "divisa": "EUR",
+          "descripcion": "Valor aproximado"
+        }
+      ],
+      "pasivos": [
+        {
+          "id": "hipoteca_principal",
+          "activo": false,
+          "corriente": false,
+          "entidad": "Hipoteca BBVA",
+          "importe": 89000.00,
+          "divisa": "EUR",
+          "descripcion": "Pendiente de amortizar"
+        },
+        {
+          "id": "prestamo_coche",
+          "activo": false,
+          "corriente": true,
+          "entidad": "Préstamo coche",
+          "importe": 4200.00,
+          "divisa": "EUR",
+          "descripcion": "Restante del préstamo del vehículo"
+        },
+        {
+          "id": "prestamo_estudios",
+          "activo": false,
+          "corriente": false,
+          "entidad": "Préstamo estudios",
+          "importe": 6100.00,
+          "divisa": "EUR",
+          "descripcion": "Financiación universitaria"
+        }
+      ]
+    },
+    {
+      "fecha": "2025-02-01",
+      "activos": [
+        {
+          "id": "inmueble_piso_centro",
+          "activo": true,
+          "corriente": false,
+          "entidad": "Piso en Calle Mayor",
+          "importe": 151200.00,
+          "divisa": "EUR",
+          "descripcion": "Valor estimado de mercado"
+        },
+        {
+          "id": "fondo_rf_global",
+          "activo": true,
+          "corriente": false,
+          "entidad": "Fondo Renta Fija Global",
+          "importe": 8700.00,
+          "divisa": "EUR",
+          "descripcion": "Fondo de renta fija"
+        },
+        {
+          "id": "fondo_rv_usa",
+          "activo": true,
+          "corriente": false,
+          "entidad": "Fondo Renta Variable USA",
+          "importe": 12480.00,
+          "divisa": "EUR",
+          "descripcion": "Indexado al S&P 500"
+        },
+        {
+          "id": "efectivo_cuenta",
+          "activo": true,
+          "corriente": true,
+          "entidad": "Cuenta bancaria",
+          "importe": 5200.00,
+          "divisa": "EUR",
+          "descripcion": "Liquidez disponible"
+        },
+        {
+          "id": "vehiculo_coche",
+          "activo": true,
+          "corriente": false,
+          "entidad": "Toyota Yaris 2018",
+          "importe": 9100.00,
+          "divisa": "EUR",
+          "descripcion": "Valor aproximado"
+        }
+      ],
+      "pasivos": [
+        {
+          "id": "hipoteca_principal",
+          "activo": false,
+          "corriente": false,
+          "entidad": "Hipoteca BBVA",
+          "importe": 88400.00,
+          "divisa": "EUR",
+          "descripcion": "Pendiente de amortizar"
+        },
+        {
+          "id": "prestamo_coche",
+          "activo": false,
+          "corriente": true,
+          "entidad": "Préstamo coche",
+          "importe": 3950.00,
+          "divisa": "EUR",
+          "descripcion": "Restante del préstamo del vehículo"
+        },
+        {
+          "id": "prestamo_estudios",
+          "activo": false,
+          "corriente": false,
+          "entidad": "Préstamo estudios",
+          "importe": 5800.00,
+          "divisa": "EUR",
+          "descripcion": "Financiación universitaria"
+        }
+      ]
+    },
+    {
+      "fecha": "2025-03-01",
+      "activos": [
+        {
+          "id": "inmueble_piso_centro",
+          "activo": true,
+          "corriente": false,
+          "entidad": "Piso en Calle Mayor",
+          "importe": 152000.00,
+          "divisa": "EUR",
+          "descripcion": "Valor estimado de mercado"
+        },
+        {
+          "id": "fondo_rf_global",
+          "activo": true,
+          "corriente": false,
+          "entidad": "Fondo Renta Fija Global",
+          "importe": 8650.00,
+          "divisa": "EUR",
+          "descripcion": "Fondo de renta fija"
+        },
+        {
+          "id": "fondo_rv_usa",
+          "activo": true,
+          "corriente": false,
+          "entidad": "Fondo Renta Variable USA",
+          "importe": 12900.00,
+          "divisa": "EUR",
+          "descripcion": "Indexado al S&P 500"
+        },
+        {
+          "id": "efectivo_cuenta",
+          "activo": true,
+          "corriente": true,
+          "entidad": "Cuenta bancaria",
+          "importe": 4900.00,
+          "divisa": "EUR",
+          "descripcion": "Liquidez disponible"
+        },
+        {
+          "id": "vehiculo_coche",
+          "activo": true,
+          "corriente": false,
+          "entidad": "Toyota Yaris 2018",
+          "importe": 9050.00,
+          "divisa": "EUR",
+          "descripcion": "Valor aproximado"
+        }
+      ],
+      "pasivos": [
+        {
+          "id": "hipoteca_principal",
+          "activo": false,
+          "corriente": false,
+          "entidad": "Hipoteca BBVA",
+          "importe": 87850.00,
+          "divisa": "EUR",
+          "descripcion": "Pendiente de amortizar"
+        },
+        {
+          "id": "prestamo_coche",
+          "activo": false,
+          "corriente": true,
+          "entidad": "Préstamo coche",
+          "importe": 3680.00,
+          "divisa": "EUR",
+          "descripcion": "Restante del préstamo del vehículo"
+        },
+        {
+          "id": "prestamo_estudios",
+          "activo": false,
+          "corriente": false,
+          "entidad": "Préstamo estudios",
+          "importe": 5550.00,
+          "divisa": "EUR",
+          "descripcion": "Financiación universitaria"
+        }
+      ]
+    },
+    {
+      "fecha": "2025-04-01",
+      "activos": [
+        {
+          "id": "inmueble_piso_centro",
+          "activo": true,
+          "corriente": false,
+          "entidad": "Piso en Calle Mayor",
+          "importe": 153300.00,
+          "divisa": "EUR",
+          "descripcion": "Valor estimado de mercado"
+        },
+        {
+          "id": "fondo_rf_global",
+          "activo": true,
+          "corriente": false,
+          "entidad": "Fondo Renta Fija Global",
+          "importe": 8800.00,
+          "divisa": "EUR",
+          "descripcion": "Fondo de renta fija"
+        },
+        {
+          "id": "fondo_rv_usa",
+          "activo": true,
+          "corriente": false,
+          "entidad": "Fondo Renta Variable USA",
+          "importe": 13150.00,
+          "divisa": "EUR",
+          "descripcion": "Indexado al S&P 500"
+        },
+        {
+          "id": "efectivo_cuenta",
+          "activo": true,
+          "corriente": true,
+          "entidad": "Cuenta bancaria",
+          "importe": 5300.00,
+          "divisa": "EUR",
+          "descripcion": "Liquidez disponible"
+        },
+        {
+          "id": "vehiculo_coche",
+          "activo": true,
+          "corriente": false,
+          "entidad": "Toyota Yaris 2018",
+          "importe": 8900.00,
+          "divisa": "EUR",
+          "descripcion": "Valor aproximado"
+        }
+      ],
+      "pasivos": [
+        {
+          "id": "hipoteca_principal",
+          "activo": false,
+          "corriente": false,
+          "entidad": "Hipoteca BBVA",
+          "importe": 87250.00,
+          "divisa": "EUR",
+          "descripcion": "Pendiente de amortizar"
+        },
+        {
+          "id": "prestamo_coche",
+          "activo": false,
+          "corriente": true,
+          "entidad": "Préstamo coche",
+          "importe": 3420.00,
+          "divisa": "EUR",
+          "descripcion": "Restante del préstamo del vehículo"
+        },
+        {
+          "id": "prestamo_estudios",
+          "activo": false,
+          "corriente": false,
+          "entidad": "Préstamo estudios",
+          "importe": 5300.00,
+          "divisa": "EUR",
+          "descripcion": "Financiación universitaria"
+        }
+      ]
+    }
+  ]
+}
