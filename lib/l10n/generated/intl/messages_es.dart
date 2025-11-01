@@ -32,6 +32,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "createNewFile": MessageLookupByLibrary.simpleMessage(
       "Crear nuevo archivo",
     ),
+    "navHome": MessageLookupByLibrary.simpleMessage("Inicio"),
+    "navSettings": MessageLookupByLibrary.simpleMessage("Configuración"),
+    "navStats": MessageLookupByLibrary.simpleMessage("Estadísticas"),
     "noData": MessageLookupByLibrary.simpleMessage(
       "No hay archivo de datos aún.",
     ),

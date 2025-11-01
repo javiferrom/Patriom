@@ -40,5 +40,20 @@
         "example": "100"
       }
     }
+  },
+
+  "navHome": "Home",
+  "@navHome": {
+    "description": "Label for the Home tab in the bottom navigation bar."
+  },
+
+  "navStats": "Stats",
+  "@navStats": {
+    "description": "Label for the Stats tab in the bottom navigation bar."
+  },
+
+  "navSettings": "Settings",
+  "@navSettings": {
+    "description": "Label for the Settings tab in the bottom navigation bar."
   }
 }

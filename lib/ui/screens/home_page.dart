@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             const Icon(Icons.account_balance_wallet, size: 48),
             const SizedBox(height: 16),
-            AutoSizeText(sharedStrings.balanceLabel(_data["balance"] ?? 0)),
+            AutoSizeText(sharedStrings.balanceLabel(0)),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () async {

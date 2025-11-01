@@ -113,6 +113,39 @@ class SharedStrings {
       args: [amount],
     );
   }
+
+  /// `Inicio`
+  String get navHome {
+    return Intl.message(
+      'Inicio',
+      name: 'navHome',
+      desc:
+          'Etiqueta para la pestaña de Inicio en la barra de navegación inferior.',
+      args: [],
+    );
+  }
+
+  /// `Estadísticas`
+  String get navStats {
+    return Intl.message(
+      'Estadísticas',
+      name: 'navStats',
+      desc:
+          'Etiqueta para la pestaña de Estadísticas en la barra de navegación inferior.',
+      args: [],
+    );
+  }
+
+  /// `Configuración`
+  String get navSettings {
+    return Intl.message(
+      'Configuración',
+      name: 'navSettings',
+      desc:
+          'Etiqueta para la pestaña de Configuración en la barra de navegación inferior.',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<SharedStrings> {

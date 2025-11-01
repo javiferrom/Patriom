@@ -40,5 +40,20 @@
         "example": "100"
       }
     }
+  },
+
+  "navHome": "Inicio",
+  "@navHome": {
+    "description": "Etiqueta para la pestaña de Inicio en la barra de navegación inferior."
+  },
+
+  "navStats": "Estadísticas",
+  "@navStats": {
+    "description": "Etiqueta para la pestaña de Estadísticas en la barra de navegación inferior."
+  },
+
+  "navSettings": "Configuración",
+  "@navSettings": {
+    "description": "Etiqueta para la pestaña de Configuración en la barra de navegación inferior."
   }
 }

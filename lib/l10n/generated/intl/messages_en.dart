@@ -30,6 +30,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "appTitle": MessageLookupByLibrary.simpleMessage("Patriom"),
     "balanceLabel": m1,
     "createNewFile": MessageLookupByLibrary.simpleMessage("Create new file"),
+    "navHome": MessageLookupByLibrary.simpleMessage("Home"),
+    "navSettings": MessageLookupByLibrary.simpleMessage("Settings"),
+    "navStats": MessageLookupByLibrary.simpleMessage("Stats"),
     "noData": MessageLookupByLibrary.simpleMessage(
       "There is no data file yet.",
     ),
