@@ -1,0 +1,55 @@
+{
+  "@@locale": "es",
+  "appTitle": "Patriom",
+  "@appTitle": {
+    "description": "Título de la aplicación mostrado en el AppBar."
+  },
+
+  "noData": "No hay archivo de datos aún.",
+  "@noData": {
+    "description": "Se muestra cuando no existe un archivo JSON local."
+  },
+
+  "createNewFile": "Crear nuevo archivo",
+  "@createNewFile": {
+    "description": "Botón para crear un nuevo archivo de datos JSON."
+  },
+
+  "uploadExistingFile": "Subir archivo existente",
+  "@uploadExistingFile": {
+    "description": "Botón para seleccionar un archivo de datos JSON existente."
+  },
+
+  "userLabel": "Usuario: {user}",
+  "@userLabel": {
+    "description": "Muestra el nombre del usuario actual.",
+    "placeholders": {
+      "user": {
+        "type": "String",
+        "example": "Nuevo Usuario"
+      }
+    }
+  },
+
+  "balanceLabel": "Balance: {amount, number, currency}",
+  "@balanceLabel": {
+    "description": "Muestra el balance del usuario formateado como moneda.",
+    "placeholders": {
+      "amount": {
+        "type": "num",
+        "example": "1000"
+      }
+    }
+  },
+
+  "addAndSave": "Agregar {amount, number, currency} y guardar",
+  "@addAndSave": {
+    "description": "Botón para sumar un monto fijo al balance y guardarlo.",
+    "placeholders": {
+      "amount": {
+        "type": "num",
+        "example": "100"
+      }
+    }
+  }
+}

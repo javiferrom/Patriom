@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:patriom/l10n/generated/l10n.dart';
 import '../../core/services/json_service.dart';
 
 class HomePage extends StatefulWidget {
@@ -42,44 +43,46 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final sharedStrings = SharedStrings.of(context);
+
     return Scaffold(
-      appBar: AppBar(title: const Text('Patriom')),
+      appBar: AppBar(title: Text(sharedStrings.appTitle)),
       body: Center(
         child: _data == null
             ? Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text('No hay archivo de datos aún.'),
-                  const SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: _createNewJson,
-                    child: const Text('Crear nuevo archivo'),
-                  ),
-                  const SizedBox(height: 10),
-                  ElevatedButton(
-                    onPressed: _pickExistingJson,
-                    child: const Text('Subir archivo existente'),
-                  ),
-                ],
-              )
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(sharedStrings.noData),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: _createNewJson,
+              child: Text(sharedStrings.createNewFile),
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: _pickExistingJson,
+              child: Text(sharedStrings.uploadExistingFile),
+            ),
+          ],
+        )
             : Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.account_balance_wallet, size: 48),
-                  const SizedBox(height: 16),
-                  Text('Usuario: ${_data!["nombreUsuario"]}'),
-                  Text('Balance: \$${_data!["balance"]}'),
-                  const SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: () async {
-                      _data!["balance"] += 100;
-                      await JsonService.saveJson(_data!);
-                      setState(() {});
-                    },
-                    child: const Text('Agregar \$100 y guardar'),
-                  ),
-                ],
-              ),
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.account_balance_wallet, size: 48),
+            const SizedBox(height: 16),
+            Text(sharedStrings.userLabel(_data!["nombreUsuario"])),
+            Text(sharedStrings.balanceLabel(_data!["balance"])),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () async {
+                _data!["balance"] += 100;
+                await JsonService.saveJson(_data!);
+                setState(() {});
+              },
+              child: Text(sharedStrings.addAndSave(100)),
+            ),
+          ],
+        ),
       ),
     );
   }
