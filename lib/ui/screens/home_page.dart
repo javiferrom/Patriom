@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_auto_size_text/flutter_auto_size_text.dart';
 import 'package:patriom/l10n/generated/l10n.dart';
 import '../../core/services/json_service.dart';
 
@@ -46,22 +47,22 @@ class _HomePageState extends State<HomePage> {
     final sharedStrings = SharedStrings.of(context);
 
     return Scaffold(
-      appBar: AppBar(title: Text(sharedStrings.appTitle)),
+      appBar: AppBar(title: AutoSizeText(sharedStrings.appTitle)),
       body: Center(
         child: _data == null
             ? Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(sharedStrings.noData),
+            AutoSizeText(sharedStrings.noData),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _createNewJson,
-              child: Text(sharedStrings.createNewFile),
+              child: AutoSizeText(sharedStrings.createNewFile),
             ),
             const SizedBox(height: 10),
             ElevatedButton(
               onPressed: _pickExistingJson,
-              child: Text(sharedStrings.uploadExistingFile),
+              child: AutoSizeText(sharedStrings.uploadExistingFile),
             ),
           ],
         )
@@ -70,8 +71,8 @@ class _HomePageState extends State<HomePage> {
           children: [
             const Icon(Icons.account_balance_wallet, size: 48),
             const SizedBox(height: 16),
-            Text(sharedStrings.userLabel(_data!["nombreUsuario"])),
-            Text(sharedStrings.balanceLabel(_data!["balance"])),
+            AutoSizeText(sharedStrings.userLabel(_data!["nombreUsuario"])),
+            AutoSizeText(sharedStrings.balanceLabel(_data!["balance"])),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () async {
@@ -79,7 +80,7 @@ class _HomePageState extends State<HomePage> {
                 await JsonService.saveJson(_data!);
                 setState(() {});
               },
-              child: Text(sharedStrings.addAndSave(100)),
+              child: AutoSizeText(sharedStrings.addAndSave(100)),
             ),
           ],
         ),
