@@ -21,8 +21,8 @@ class PatriomApp extends StatelessWidget {
       ],
       supportedLocales: SharedStrings.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
-      theme: FlexThemeData.light(),
-      darkTheme: FlexThemeData.dark(),
+      theme: FlexThemeData.light(scheme: FlexScheme.money),
+      darkTheme: FlexThemeData.dark(scheme: FlexScheme.money),
       themeMode: ThemeMode.system,
       home: const HomePage(),
     );
