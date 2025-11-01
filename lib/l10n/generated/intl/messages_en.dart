@@ -24,8 +24,6 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m1(amount) => "Balance: {amount, number, currency}";
 
-  static String m2(user) => "User: ${user}";
-
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "addAndSave": m0,
@@ -38,6 +36,5 @@ class MessageLookup extends MessageLookupByLibrary {
     "uploadExistingFile": MessageLookupByLibrary.simpleMessage(
       "Upload existing file",
     ),
-    "userLabel": m2,
   };
 }

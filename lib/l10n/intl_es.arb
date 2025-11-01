@@ -20,17 +20,6 @@
     "description": "Botón para seleccionar un archivo de datos JSON existente."
   },
 
-  "userLabel": "Usuario: {user}",
-  "@userLabel": {
-    "description": "Muestra el nombre del usuario actual.",
-    "placeholders": {
-      "user": {
-        "type": "String",
-        "example": "Nuevo Usuario"
-      }
-    }
-  },
-
   "balanceLabel": "Balance: {amount, number, currency}",
   "@balanceLabel": {
     "description": "Muestra el balance del usuario formateado como moneda.",

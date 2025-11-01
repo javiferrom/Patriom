@@ -2,6 +2,7 @@ import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:patriom/core/patriom_const.dart';
+import 'package:patriom/core/portfolio_history_storage.dart';
 import 'package:patriom/ui/screens/home_page.dart';
 
 import '../l10n/generated/l10n.dart';

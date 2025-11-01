@@ -20,17 +20,6 @@
     "description": "Button to pick an existing JSON data file."
   },
 
-  "userLabel": "User: {user}",
-  "@userLabel": {
-    "description": "Displays the current user's name.",
-    "placeholders": {
-      "user": {
-        "type": "String",
-        "example": "Nuevo Usuario"
-      }
-    }
-  },
-
   "balanceLabel": "Balance: {amount, number, currency}",
   "@balanceLabel": {
     "description": "Displays the user's balance formatted as currency.",

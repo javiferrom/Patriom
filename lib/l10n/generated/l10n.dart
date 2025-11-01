@@ -94,16 +94,6 @@ class SharedStrings {
     );
   }
 
-  /// `Usuario: {user}`
-  String userLabel(String user) {
-    return Intl.message(
-      'Usuario: $user',
-      name: 'userLabel',
-      desc: 'Muestra el nombre del usuario actual.',
-      args: [user],
-    );
-  }
-
   /// `Balance: {amount, number, currency}`
   String balanceLabel(num amount) {
     return Intl.message(
