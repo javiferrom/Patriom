@@ -1,3 +1,4 @@
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:patriom/ui/screens/home_page.dart';
 
@@ -9,10 +10,9 @@ class PatriomApp extends StatelessWidget {
     return MaterialApp(
       title: 'Patriom',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
-        useMaterial3: true,
-      ),
+      theme: FlexThemeData.light(),
+      darkTheme: FlexThemeData.dark(),
+      themeMode: ThemeMode.system,
       home: const HomePage(),
     );
   }
