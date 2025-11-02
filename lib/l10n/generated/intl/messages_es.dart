@@ -37,8 +37,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "about": MessageLookupByLibrary.simpleMessage("Acerca de"),
     "activeLabel": MessageLookupByLibrary.simpleMessage("Activo"),
     "addAndSave": m0,
-    "amountHint": MessageLookupByLibrary.simpleMessage("ej. 150000.00"),
-    "amountLabel": MessageLookupByLibrary.simpleMessage("Monto"),
+    "amountHint": MessageLookupByLibrary.simpleMessage("ej. 100.00"),
+    "amountLabel": MessageLookupByLibrary.simpleMessage("Cantidad"),
     "appTitle": MessageLookupByLibrary.simpleMessage("Patriom"),
     "asset": MessageLookupByLibrary.simpleMessage("Activo"),
     "assets": MessageLookupByLibrary.simpleMessage("Activos"),
@@ -46,8 +46,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "balanceLabel": m2,
     "cancel": MessageLookupByLibrary.simpleMessage("Cancelar"),
     "copiedToDate": m3,
-    "copyLatestToTodayTooltip": MessageLookupByLibrary.simpleMessage(
-      "Copiar la última a hoy",
+    "copyLatestToDateTooltip": MessageLookupByLibrary.simpleMessage(
+      "Copiar la última a una fecha",
     ),
     "createEntryTitle": MessageLookupByLibrary.simpleMessage("Crear Entrada"),
     "createNewFile": MessageLookupByLibrary.simpleMessage(
@@ -79,12 +79,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "descriptionLabel": MessageLookupByLibrary.simpleMessage("Descripción"),
     "editItemTitle": MessageLookupByLibrary.simpleMessage("Editar Elemento"),
     "english": MessageLookupByLibrary.simpleMessage("Inglés"),
-    "entityHint": MessageLookupByLibrary.simpleMessage(
-      "ej. Piso en la Calle Principal",
-    ),
+    "entityHint": MessageLookupByLibrary.simpleMessage("ej. BBVA"),
     "entityLabel": MessageLookupByLibrary.simpleMessage("Entidad"),
-    "idHint": MessageLookupByLibrary.simpleMessage("ej. propiedad_piso_centro"),
-    "idLabel": MessageLookupByLibrary.simpleMessage("ID"),
+    "idHint": MessageLookupByLibrary.simpleMessage("ej. Cuenta de ahorros"),
+    "idLabel": MessageLookupByLibrary.simpleMessage("Nombre del activo/pasivo"),
     "invalidNumber": MessageLookupByLibrary.simpleMessage("Número inválido"),
     "language": MessageLookupByLibrary.simpleMessage("Idioma"),
     "liabilities": MessageLookupByLibrary.simpleMessage("Pasivos"),

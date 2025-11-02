@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9c7c0cc-a071-4f69-98a6-cbb15a712685" name="Changes" comment="Actualización de dependencias">
+    <list default="true" id="c9c7c0cc-a071-4f69-98a6-cbb15a712685" name="Changes" comment="Añade traducciones y mejora la interfaz de usuario&#10;&#10;Se han añadido numerosas cadenas de texto para la internacionalización en inglés y español.&#10;&#10;Otros cambios:&#10;- Se ha actualizado la dependencia `fl_chart`.&#10;- Las pantallas `HomePage`, `CreateEntryPage` y `EditItemPage` ahora utilizan las cadenas de texto traducidas.&#10;- Se ha añadido un diálogo de confirmación antes de eliminar un elemento.&#10;- Se han realizado pequeños ajustes visuales en la `HomePage`, como cambiar los iconos de los elementos financieros.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/portfolio_history_storage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/portfolio_history_storage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/l10n/generated/intl/messages_en.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/generated/intl/messages_en.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/l10n/generated/intl/messages_es.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/generated/intl/messages_es.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/l10n/generated/l10n.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/generated/l10n.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/l10n/intl_en.arb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/intl_en.arb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/l10n/intl_es.arb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/intl_es.arb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/screens/create_entry_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/create_entry_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ui/screens/edit_item_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/edit_item_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ui/screens/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/home_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/screens/stats_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/stats_page.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +42,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="detached" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -86,7 +88,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "8b949bf8",
+    "git-widget-placeholder": "master",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Usuario/Desktop/Patriom",
@@ -109,7 +111,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762021049213</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Añade traducciones y mejora la interfaz de usuario&#10;&#10;Se han añadido numerosas cadenas de texto para la internacionalización en inglés y español.&#10;&#10;Otros cambios:&#10;- Se ha actualizado la dependencia `fl_chart`.&#10;- Las pantallas `HomePage`, `CreateEntryPage` y `EditItemPage` ahora utilizan las cadenas de texto traducidas.&#10;- Se ha añadido un diálogo de confirmación antes de eliminar un elemento.&#10;- Se han realizado pequeños ajustes visuales en la `HomePage`, como cambiar los iconos de los elementos financieros.">
+      <option name="closed" value="true" />
+      <created>1762109439681</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762109439681</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Añade traducciones y mejora la interfaz de usuario&#10;&#10;Se han añadido numerosas cadenas de texto para la internacionalización en inglés y español.&#10;&#10;Otros cambios:&#10;- Se ha actualizado la dependencia `fl_chart`.&#10;- Las pantallas `HomePage`, `CreateEntryPage` y `EditItemPage` ahora utilizan las cadenas de texto traducidas.&#10;- Se ha añadido un diálogo de confirmación antes de eliminar un elemento.&#10;- Se han realizado pequeños ajustes visuales en la `HomePage`, como cambiar los iconos de los elementos financieros.">
+      <option name="closed" value="true" />
+      <created>1762110040052</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1762110040052</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -132,6 +150,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'main' of https://github.com/javiferrom/Patriom" />
     <MESSAGE value="Actualización de dependencias" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualización de dependencias" />
+    <MESSAGE value="Cambios en traducciones y textos de la interfaz" />
+    <MESSAGE value="Añade traducciones y mejora la interfaz de usuario&#10;&#10;Se han añadido numerosas cadenas de texto para la internacionalización en inglés y español.&#10;&#10;Otros cambios:&#10;- Se ha actualizado la dependencia `fl_chart`.&#10;- Las pantallas `HomePage`, `CreateEntryPage` y `EditItemPage` ahora utilizan las cadenas de texto traducidas.&#10;- Se ha añadido un diálogo de confirmación antes de eliminar un elemento.&#10;- Se han realizado pequeños ajustes visuales en la `HomePage`, como cambiar los iconos de los elementos financieros." />
+    <option name="LAST_COMMIT_MESSAGE" value="Añade traducciones y mejora la interfaz de usuario&#10;&#10;Se han añadido numerosas cadenas de texto para la internacionalización en inglés y español.&#10;&#10;Otros cambios:&#10;- Se ha actualizado la dependencia `fl_chart`.&#10;- Las pantallas `HomePage`, `CreateEntryPage` y `EditItemPage` ahora utilizan las cadenas de texto traducidas.&#10;- Se ha añadido un diálogo de confirmación antes de eliminar un elemento.&#10;- Se han realizado pequeños ajustes visuales en la `HomePage`, como cambiar los iconos de los elementos financieros." />
   </component>
 </project>

@@ -169,7 +169,7 @@ class PortfolioHistoryStorage {
     await overwriteModel(PortfolioHistory(history: filtered));
   }
 
-  static Future<void> duplicateEntry(String fromDate, String toDate, {bool overwrite = false}) async {
+  static Future<void> _duplicateEntry(String fromDate, String toDate, {bool overwrite = false}) async {
     final m = await getModel();
     final src = m.entryByDate(fromDate);
     if (src == null) return;
@@ -202,18 +202,15 @@ class PortfolioHistoryStorage {
     await overwriteModel(updated);
   }
 
-  static Future<String?> copyLatestToToday({bool overwrite = false}) async {
+  static Future<String?> copyLatestToDate(String toDate, {bool overwrite = false}) async {
     final m = await getModel();
     final dates = _sortedDatesDesc(m);
     if (dates.isEmpty) return null;
     final latest = dates.first;
 
-    final now = DateTime.now();
-    final today = '${now.year.toString().padLeft(4, '0')}-${now.month.toString().padLeft(2, '0')}-${now.day.toString().padLeft(2, '0')}';
+    if (latest.compareTo(toDate) >= 0 && !overwrite) return null;
 
-    if (latest.compareTo(today) >= 0 && !overwrite) return null;
-
-    await duplicateEntry(latest, today, overwrite: overwrite);
-    return today;
+    await _duplicateEntry(latest, toDate, overwrite: overwrite);
+    return toDate;
   }
 }

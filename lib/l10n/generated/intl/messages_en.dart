@@ -37,7 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "about": MessageLookupByLibrary.simpleMessage("About"),
     "activeLabel": MessageLookupByLibrary.simpleMessage("Active"),
     "addAndSave": m0,
-    "amountHint": MessageLookupByLibrary.simpleMessage("e.g. 150000.00"),
+    "amountHint": MessageLookupByLibrary.simpleMessage("e.g. 100.00"),
     "amountLabel": MessageLookupByLibrary.simpleMessage("Amount"),
     "appTitle": MessageLookupByLibrary.simpleMessage("Patriom"),
     "asset": MessageLookupByLibrary.simpleMessage("Asset"),
@@ -46,8 +46,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "balanceLabel": m2,
     "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
     "copiedToDate": m3,
-    "copyLatestToTodayTooltip": MessageLookupByLibrary.simpleMessage(
-      "Copy latest to today",
+    "copyLatestToDateTooltip": MessageLookupByLibrary.simpleMessage(
+      "Copy latest to a date",
     ),
     "createEntryTitle": MessageLookupByLibrary.simpleMessage("Create Entry"),
     "createNewFile": MessageLookupByLibrary.simpleMessage("Create new file"),
@@ -73,14 +73,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "descriptionLabel": MessageLookupByLibrary.simpleMessage("Description"),
     "editItemTitle": MessageLookupByLibrary.simpleMessage("Edit Item"),
     "english": MessageLookupByLibrary.simpleMessage("English"),
-    "entityHint": MessageLookupByLibrary.simpleMessage(
-      "e.g. Flat on Main Street",
-    ),
+    "entityHint": MessageLookupByLibrary.simpleMessage("e.g. BBVA"),
     "entityLabel": MessageLookupByLibrary.simpleMessage("Entity"),
-    "idHint": MessageLookupByLibrary.simpleMessage(
-      "e.g. property_downtown_flat",
+    "idHint": MessageLookupByLibrary.simpleMessage("e.g. bank account"),
+    "idLabel": MessageLookupByLibrary.simpleMessage(
+      "Name of asset or liability",
     ),
-    "idLabel": MessageLookupByLibrary.simpleMessage("ID"),
     "invalidNumber": MessageLookupByLibrary.simpleMessage("Invalid number"),
     "language": MessageLookupByLibrary.simpleMessage("Language"),
     "liabilities": MessageLookupByLibrary.simpleMessage("Liabilities"),

@@ -6,7 +6,8 @@ import 'package:patriom/core/portfolio_history_storage.dart';
 import 'package:patriom/l10n/generated/l10n.dart';
 
 class CreateEntryPage extends StatefulWidget {
-  const CreateEntryPage({super.key});
+  final String? initialDate;
+  const CreateEntryPage({super.key, this.initialDate});
 
   @override
   State<CreateEntryPage> createState() => _CreateEntryPageState();
@@ -29,7 +30,7 @@ class _CreateEntryPageState extends State<CreateEntryPage> {
   @override
   void initState() {
     super.initState();
-    _dateCtrl = TextEditingController(text: _todayIso());
+    _dateCtrl = TextEditingController(text: widget.initialDate ?? _todayIso());
   }
 
   @override

@@ -312,11 +312,11 @@ class SharedStrings {
     return Intl.message('Sin fecha', name: 'noDate', desc: '', args: []);
   }
 
-  /// `Copiar la última a hoy`
-  String get copyLatestToTodayTooltip {
+  /// `Copiar la última a una fecha`
+  String get copyLatestToDateTooltip {
     return Intl.message(
-      'Copiar la última a hoy',
-      name: 'copyLatestToTodayTooltip',
+      'Copiar la última a una fecha',
+      name: 'copyLatestToDateTooltip',
       desc: '',
       args: [],
     );
@@ -392,15 +392,20 @@ class SharedStrings {
     return Intl.message('Corriente', name: 'currentLabel', desc: '', args: []);
   }
 
-  /// `ID`
+  /// `Nombre del activo/pasivo`
   String get idLabel {
-    return Intl.message('ID', name: 'idLabel', desc: '', args: []);
+    return Intl.message(
+      'Nombre del activo/pasivo',
+      name: 'idLabel',
+      desc: '',
+      args: [],
+    );
   }
 
-  /// `ej. propiedad_piso_centro`
+  /// `ej. Cuenta de ahorros`
   String get idHint {
     return Intl.message(
-      'ej. propiedad_piso_centro',
+      'ej. Cuenta de ahorros',
       name: 'idHint',
       desc: '',
       args: [],
@@ -417,29 +422,19 @@ class SharedStrings {
     return Intl.message('Entidad', name: 'entityLabel', desc: '', args: []);
   }
 
-  /// `ej. Piso en la Calle Principal`
+  /// `ej. BBVA`
   String get entityHint {
-    return Intl.message(
-      'ej. Piso en la Calle Principal',
-      name: 'entityHint',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('ej. BBVA', name: 'entityHint', desc: '', args: []);
   }
 
-  /// `Monto`
+  /// `Cantidad`
   String get amountLabel {
-    return Intl.message('Monto', name: 'amountLabel', desc: '', args: []);
+    return Intl.message('Cantidad', name: 'amountLabel', desc: '', args: []);
   }
 
-  /// `ej. 150000.00`
+  /// `ej. 100.00`
   String get amountHint {
-    return Intl.message(
-      'ej. 150000.00',
-      name: 'amountHint',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('ej. 100.00', name: 'amountHint', desc: '', args: []);
   }
 
   /// `Número inválido`

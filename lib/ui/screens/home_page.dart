@@ -3,6 +3,7 @@ import 'package:flutter_auto_size_text/flutter_auto_size_text.dart';
 import 'package:patriom/core/portfolio_history.dart';
 import 'package:patriom/core/portfolio_history_storage.dart';
 import 'package:patriom/l10n/generated/l10n.dart';
+import '../widgets/patriom_app_bar_actions.dart';
 import 'create_entry_page.dart';
 import 'edit_item_page.dart';
 
@@ -64,18 +65,26 @@ class _HomePageState extends State<HomePage> {
           ? ''
           : _dates[_pageIndex];
 
-  bool get _showCopyButton {
-    if (_dates.isEmpty) return false;
-    final latest = _dates.first;
-    final now = DateTime.now();
-    final today =
-        '${now.year.toString().padLeft(4, '0')}-${now.month.toString().padLeft(2, '0')}-${now.day.toString().padLeft(2, '0')}';
-    return latest.compareTo(today) < 0;
-  }
+  Future<void> _copyLatestToDate() async {
+    if (_dates.isEmpty) return;
 
-  Future<void> _copyLatestToToday() async {
     final sharedStrings = SharedStrings.of(context);
-    final newDate = await PortfolioHistoryStorage.copyLatestToToday();
+
+    final now = DateTime.now();
+    final pickedDate = await showDatePicker(
+      context: context,
+      initialDate: now,
+      firstDate: DateTime(1990),
+      lastDate: DateTime(2100),
+    );
+
+    if (pickedDate == null) return;
+
+    final newDateString =
+        '${pickedDate.year.toString().padLeft(4, '0')}-${pickedDate.month.toString().padLeft(2, '0')}-${pickedDate.day.toString().padLeft(2, '0')}';
+
+    final newDate = await PortfolioHistoryStorage.copyLatestToDate(newDateString);
+
     if (newDate == null) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
@@ -85,7 +94,9 @@ class _HomePageState extends State<HomePage> {
       );
       return;
     }
+
     await _refresh();
+
     if (!mounted) return;
     final idx = _dates.indexOf(newDate);
     if (idx >= 0) {
@@ -137,11 +148,11 @@ class _HomePageState extends State<HomePage> {
     final sharedStrings = SharedStrings.of(context);
 
     return Scaffold(
-      appBar: AppBar(title: AutoSizeText(sharedStrings.appTitle)),
+      appBar: AppBar(title: AutoSizeText(sharedStrings.appTitle), actions: const [PatriomAppBarActions()],),
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           final saved = await Navigator.of(context).push<bool>(
-            MaterialPageRoute(builder: (_) => const CreateEntryPage()),
+            MaterialPageRoute(builder: (_) => CreateEntryPage(initialDate: _currentDate.isEmpty ? null : _currentDate,)),
           );
           if (saved == true) {
             await _refresh();
@@ -172,23 +183,50 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Expanded(
                             child: Center(
-                              child: Text(
-                                _currentDate.isEmpty
-                                    ? sharedStrings.noDate
-                                    : _currentDate,
-                                style: Theme.of(context).textTheme.titleLarge,
-                              ),
+                              child: _dates.isEmpty
+                                  ? Text(
+                                      sharedStrings.noDate,
+                                      style: Theme.of(context).textTheme.titleLarge,
+                                    )
+                                  : DropdownButton<String>(
+                                      value: _currentDate,
+                                      isExpanded: true,
+                                      underline: const SizedBox.shrink(),
+                                      items: _dates.map<DropdownMenuItem<String>>((String value) {
+                                        return DropdownMenuItem<String>(
+                                          value: value,
+                                          child: Center(
+                                            child: Text(
+                                              value,
+                                              style: Theme.of(context).textTheme.titleLarge,
+                                            ),
+                                          ),
+                                        );
+                                      }).toList(),
+                                      onChanged: (String? newValue) {
+                                        if (newValue != null) {
+                                          final index = _dates.indexOf(newValue);
+                                          if (index != -1) {
+                                            _pageController.jumpToPage(index);
+                                            setState(() {
+                                              _pageIndex = index;
+                                            });
+                                          }
+                                        }
+                                      },
+                                    ),
                             ),
                           ),
                           Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              if (_currentDate.isNotEmpty)
+                              if (_dates.isNotEmpty)
                                 IconButton(
-                                  tooltip: sharedStrings.copyLatestToTodayTooltip,
+                                  tooltip: sharedStrings.copyLatestToDateTooltip,
                                   icon: const Icon(Icons.copy_all),
-                                  onPressed: _copyLatestToToday,
+                                  onPressed: _copyLatestToDate,
                                 ),
+                              if (_currentDate.isNotEmpty)
                                 IconButton(
                                   tooltip: sharedStrings.deleteThisDateTooltip,
                                   icon: const Icon(Icons.delete_forever),
@@ -252,14 +290,14 @@ class _HomePageState extends State<HomePage> {
                                     color: color,
                                   ),
                                   title: Text(
-                                    it.entity,
+                                    '${it.id} • ${it.entity}',
                                     style: TextStyle(
                                       color: color,
                                       fontWeight: FontWeight.w600,
                                     ),
                                   ),
                                   subtitle: Text(
-                                    '$sign ${it.currency} ${it.amount.toStringAsFixed(2)} • ${it.description}',
+                                    '$sign ${it.amount.toStringAsFixed(2)} ${it.currency} • ${it.description}',
                                   ),
                                   trailing: const Icon(Icons.edit),
                                   onTap: () async {
