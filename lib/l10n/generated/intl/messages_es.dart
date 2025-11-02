@@ -22,22 +22,37 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static String m0(amount) => "Agregar {amount, number, currency} y guardar";
 
-  static String m1(amount) => "Balance: {amount, number, currency}";
+  static String m1(percentage) => "${percentage}%\nActivos";
+
+  static String m2(amount) => "Balance: {amount, number, currency}";
+
+  static String m3(percentage) => "${percentage}%\nPasivos";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "about": MessageLookupByLibrary.simpleMessage("Acerca de"),
     "addAndSave": m0,
     "appTitle": MessageLookupByLibrary.simpleMessage("Patriom"),
-    "balanceLabel": m1,
+    "assetsAndPercentage": m1,
+    "balanceLabel": m2,
     "createNewFile": MessageLookupByLibrary.simpleMessage(
       "Crear nuevo archivo",
     ),
+    "defaultCurrency": MessageLookupByLibrary.simpleMessage(
+      "Divisa por defecto",
+    ),
+    "liabilitiesAndPercentage": m3,
     "navHome": MessageLookupByLibrary.simpleMessage("Inicio"),
     "navSettings": MessageLookupByLibrary.simpleMessage("Configuración"),
     "navStats": MessageLookupByLibrary.simpleMessage("Estadísticas"),
     "noData": MessageLookupByLibrary.simpleMessage(
       "No hay archivo de datos aún.",
     ),
+    "settings": MessageLookupByLibrary.simpleMessage("Ajustes"),
+    "systemDefault": MessageLookupByLibrary.simpleMessage(
+      "Por defecto del sistema",
+    ),
+    "theme": MessageLookupByLibrary.simpleMessage("Tema"),
     "uploadExistingFile": MessageLookupByLibrary.simpleMessage(
       "Subir archivo existente",
     ),
