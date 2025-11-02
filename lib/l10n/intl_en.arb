@@ -4,25 +4,21 @@
   "@appTitle": {
     "description": "Application title shown in the AppBar."
   },
-
-  "noData": "There is no data file yet.",
+  "noData": "No data file yet.",
   "@noData": {
-    "description": "Shown when no local JSON file exists."
+    "description": "Shown when no local JSON data file exists."
   },
-
   "createNewFile": "Create new file",
   "@createNewFile": {
     "description": "Button to create a new JSON data file."
   },
-
   "uploadExistingFile": "Upload existing file",
   "@uploadExistingFile": {
-    "description": "Button to pick an existing JSON data file."
+    "description": "Button to select an existing JSON data file."
   },
-
   "balanceLabel": "Balance: {amount, number, currency}",
   "@balanceLabel": {
-    "description": "Displays the user's balance formatted as currency.",
+    "description": "Displays the user's balance formatted as a currency.",
     "placeholders": {
       "amount": {
         "type": "num",
@@ -30,10 +26,9 @@
       }
     }
   },
-
   "addAndSave": "Add {amount, number, currency} and save",
   "@addAndSave": {
-    "description": "Button to add a fixed amount to the balance and persist it.",
+    "description": "Button to add a fixed amount to the balance and save it.",
     "placeholders": {
       "amount": {
         "type": "num",
@@ -41,19 +36,56 @@
       }
     }
   },
-
   "navHome": "Home",
   "@navHome": {
     "description": "Label for the Home tab in the bottom navigation bar."
   },
-
   "navStats": "Stats",
   "@navStats": {
     "description": "Label for the Stats tab in the bottom navigation bar."
   },
-
   "navSettings": "Settings",
   "@navSettings": {
     "description": "Label for the Settings tab in the bottom navigation bar."
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Title for the settings page."
+  },
+  "theme": "Theme",
+  "@theme": {
+    "description": "Option to change the application theme."
+  },
+  "systemDefault": "System default",
+  "@systemDefault": {
+    "description": "Option to use the default system theme."
+  },
+  "defaultCurrency": "Default currency",
+  "@defaultCurrency": {
+    "description": "Option to change the default currency."
+  },
+  "about": "About",
+  "@about": {
+    "description": "Option to show information about the application."
+  },
+  "assetsAndPercentage": "{percentage}%\nAssets",
+  "@assetsAndPercentage": {
+    "description": "Displays the percentage of assets in the pie chart.",
+    "placeholders": {
+      "percentage": {
+        "type": "double",
+        "example": "70.0"
+      }
+    }
+  },
+  "liabilitiesAndPercentage": "{percentage}%\nLiabilities",
+  "@liabilitiesAndPercentage": {
+    "description": "Displays the percentage of liabilities in the pie chart.",
+    "placeholders": {
+      "percentage": {
+        "type": "double",
+        "example": "30.0"
+      }
+    }
   }
 }

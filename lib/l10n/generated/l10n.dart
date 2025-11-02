@@ -146,6 +146,76 @@ class SharedStrings {
       args: [],
     );
   }
+
+  /// `Ajustes`
+  String get settings {
+    return Intl.message(
+      'Ajustes',
+      name: 'settings',
+      desc: 'Título para la página de ajustes.',
+      args: [],
+    );
+  }
+
+  /// `Tema`
+  String get theme {
+    return Intl.message(
+      'Tema',
+      name: 'theme',
+      desc: 'Opción para cambiar el tema de la aplicación.',
+      args: [],
+    );
+  }
+
+  /// `Por defecto del sistema`
+  String get systemDefault {
+    return Intl.message(
+      'Por defecto del sistema',
+      name: 'systemDefault',
+      desc: 'Opción para usar el tema por defecto del sistema.',
+      args: [],
+    );
+  }
+
+  /// `Divisa por defecto`
+  String get defaultCurrency {
+    return Intl.message(
+      'Divisa por defecto',
+      name: 'defaultCurrency',
+      desc: 'Opción para cambiar la divisa por defecto.',
+      args: [],
+    );
+  }
+
+  /// `Acerca de`
+  String get about {
+    return Intl.message(
+      'Acerca de',
+      name: 'about',
+      desc: 'Opción para mostrar información sobre la aplicación.',
+      args: [],
+    );
+  }
+
+  /// `{percentage}%\nActivos`
+  String assetsAndPercentage(double percentage) {
+    return Intl.message(
+      '$percentage%\nActivos',
+      name: 'assetsAndPercentage',
+      desc: 'Muestra el porcentaje de activos en el gráfico de tarta.',
+      args: [percentage],
+    );
+  }
+
+  /// `{percentage}%\nPasivos`
+  String liabilitiesAndPercentage(double percentage) {
+    return Intl.message(
+      '$percentage%\nPasivos',
+      name: 'liabilitiesAndPercentage',
+      desc: 'Muestra el porcentaje de pasivos en el gráfico de tarta.',
+      args: [percentage],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<SharedStrings> {

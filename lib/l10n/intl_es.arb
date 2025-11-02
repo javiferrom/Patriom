@@ -4,22 +4,18 @@
   "@appTitle": {
     "description": "Título de la aplicación mostrado en el AppBar."
   },
-
   "noData": "No hay archivo de datos aún.",
   "@noData": {
     "description": "Se muestra cuando no existe un archivo JSON local."
   },
-
   "createNewFile": "Crear nuevo archivo",
   "@createNewFile": {
     "description": "Botón para crear un nuevo archivo de datos JSON."
   },
-
   "uploadExistingFile": "Subir archivo existente",
   "@uploadExistingFile": {
     "description": "Botón para seleccionar un archivo de datos JSON existente."
   },
-
   "balanceLabel": "Balance: {amount, number, currency}",
   "@balanceLabel": {
     "description": "Muestra el balance del usuario formateado como moneda.",
@@ -30,7 +26,6 @@
       }
     }
   },
-
   "addAndSave": "Agregar {amount, number, currency} y guardar",
   "@addAndSave": {
     "description": "Botón para sumar un monto fijo al balance y guardarlo.",
@@ -41,19 +36,56 @@
       }
     }
   },
-
   "navHome": "Inicio",
   "@navHome": {
     "description": "Etiqueta para la pestaña de Inicio en la barra de navegación inferior."
   },
-
   "navStats": "Estadísticas",
   "@navStats": {
     "description": "Etiqueta para la pestaña de Estadísticas en la barra de navegación inferior."
   },
-
   "navSettings": "Configuración",
   "@navSettings": {
     "description": "Etiqueta para la pestaña de Configuración en la barra de navegación inferior."
+  },
+  "settings": "Ajustes",
+  "@settings": {
+    "description": "Título para la página de ajustes."
+  },
+  "theme": "Tema",
+  "@theme": {
+    "description": "Opción para cambiar el tema de la aplicación."
+  },
+  "systemDefault": "Por defecto del sistema",
+  "@systemDefault": {
+    "description": "Opción para usar el tema por defecto del sistema."
+  },
+  "defaultCurrency": "Divisa por defecto",
+  "@defaultCurrency": {
+    "description": "Opción para cambiar la divisa por defecto."
+  },
+  "about": "Acerca de",
+  "@about": {
+    "description": "Opción para mostrar información sobre la aplicación."
+  },
+  "assetsAndPercentage": "{percentage}%\nActivos",
+  "@assetsAndPercentage": {
+    "description": "Muestra el porcentaje de activos en el gráfico de tarta.",
+    "placeholders": {
+      "percentage": {
+        "type": "double",
+        "example": "70.0"
+      }
+    }
+  },
+  "liabilitiesAndPercentage": "{percentage}%\nPasivos",
+  "@liabilitiesAndPercentage": {
+    "description": "Muestra el porcentaje de pasivos en el gráfico de tarta.",
+    "placeholders": {
+      "percentage": {
+        "type": "double",
+        "example": "30.0"
+      }
+    }
   }
 }
