@@ -87,5 +87,101 @@
         "example": "30.0"
       }
     }
-  }
+  },
+  "language": "Idioma",
+  "@language": {
+    "description": "Opción para cambiar el idioma de la aplicación."
+  },
+  "spanish": "Español",
+  "@spanish": {
+    "description": "El idioma español."
+  },
+  "english": "Inglés",
+  "@english": {
+    "description": "El idioma inglés."
+  },
+  "nothingToCopy": "Nada que copiar (la última fecha ya es hoy)",
+  "@nothingToCopy": {},
+  "copiedToDate": "Copiado a {date}",
+  "@copiedToDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteDateTitle": "Eliminar fecha",
+  "@deleteDateTitle": {},
+  "deleteDateContent": "¿Eliminar toda la colección para {date}?",
+  "@deleteDateContent": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "cancel": "Cancelar",
+  "@cancel": {},
+  "delete": "Eliminar",
+  "@delete": {},
+  "noEntriesYet": "Aún no hay entradas",
+  "@noEntriesYet": {},
+  "noDate": "Sin fecha",
+  "@noDate": {},
+  "copyLatestToDateTooltip": "Copiar la última a una fecha",
+  "@copyLatestToDateTooltip": {},
+  "deleteThisDateTooltip": "Eliminar esta fecha",
+  "@deleteThisDateTooltip": {},
+  "assets": "Activos",
+  "@assets": {},
+  "liabilities": "Pasivos",
+  "@liabilities": {},
+  "noItems": "No hay elementos",
+  "@noItems": {},
+  "createEntryTitle": "Crear Entrada",
+  "@createEntryTitle": {},
+  "dateLabel": "Fecha (AAAA-MM-DD)",
+  "@dateLabel": {},
+  "asset": "Activo",
+  "@asset": {},
+  "liability": "Pasivo",
+  "@liability": {},
+  "activeLabel": "Activo",
+  "@activeLabel": {},
+  "currentLabel": "Corriente",
+  "@currentLabel": {},
+  "idLabel": "Nombre del activo/pasivo",
+  "@idLabel": {},
+  "idHint": "ej. Cuenta de ahorros",
+  "@idHint": {},
+  "requiredField": "Requerido",
+  "@requiredField": {},
+  "entityLabel": "Entidad",
+  "@entityLabel": {},
+  "entityHint": "ej. BBVA",
+  "@entityHint": {},
+  "amountLabel": "Cantidad",
+  "@amountLabel": {},
+  "amountHint": "ej. 100.00",
+  "@amountHint": {},
+  "invalidNumber": "Número inválido",
+  "@invalidNumber": {},
+  "currencyLabel": "Divisa (ISO 4217)",
+  "@currencyLabel": {},
+  "currencyHint": "EUR / USD / GBP",
+  "@currencyHint": {},
+  "currencyValidator": "Código de 3 letras",
+  "@currencyValidator": {},
+  "descriptionLabel": "Descripción",
+  "@descriptionLabel": {},
+  "descriptionHint": "Notas opcionales",
+  "@descriptionHint": {},
+  "save": "Guardar",
+  "@save": {},
+  "editItemTitle": "Editar Elemento",
+  "@editItemTitle": {},
+  "deleteItemTitle": "Eliminar Elemento",
+  "@deleteItemTitle": {},
+  "deleteItemContent": "¿Estás seguro de que quieres eliminar este elemento?",
+  "@deleteItemContent": {}
 }

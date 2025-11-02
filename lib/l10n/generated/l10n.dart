@@ -216,6 +216,326 @@ class SharedStrings {
       args: [percentage],
     );
   }
+
+  /// `Idioma`
+  String get language {
+    return Intl.message(
+      'Idioma',
+      name: 'language',
+      desc: 'Opción para cambiar el idioma de la aplicación.',
+      args: [],
+    );
+  }
+
+  /// `Español`
+  String get spanish {
+    return Intl.message(
+      'Español',
+      name: 'spanish',
+      desc: 'El idioma español.',
+      args: [],
+    );
+  }
+
+  /// `Inglés`
+  String get english {
+    return Intl.message(
+      'Inglés',
+      name: 'english',
+      desc: 'El idioma inglés.',
+      args: [],
+    );
+  }
+
+  /// `Nada que copiar (la última fecha ya es hoy)`
+  String get nothingToCopy {
+    return Intl.message(
+      'Nada que copiar (la última fecha ya es hoy)',
+      name: 'nothingToCopy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Copiado a {date}`
+  String copiedToDate(String date) {
+    return Intl.message(
+      'Copiado a $date',
+      name: 'copiedToDate',
+      desc: '',
+      args: [date],
+    );
+  }
+
+  /// `Eliminar fecha`
+  String get deleteDateTitle {
+    return Intl.message(
+      'Eliminar fecha',
+      name: 'deleteDateTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `¿Eliminar toda la colección para {date}?`
+  String deleteDateContent(String date) {
+    return Intl.message(
+      '¿Eliminar toda la colección para $date?',
+      name: 'deleteDateContent',
+      desc: '',
+      args: [date],
+    );
+  }
+
+  /// `Cancelar`
+  String get cancel {
+    return Intl.message('Cancelar', name: 'cancel', desc: '', args: []);
+  }
+
+  /// `Eliminar`
+  String get delete {
+    return Intl.message('Eliminar', name: 'delete', desc: '', args: []);
+  }
+
+  /// `Aún no hay entradas`
+  String get noEntriesYet {
+    return Intl.message(
+      'Aún no hay entradas',
+      name: 'noEntriesYet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sin fecha`
+  String get noDate {
+    return Intl.message('Sin fecha', name: 'noDate', desc: '', args: []);
+  }
+
+  /// `Copiar la última a hoy`
+  String get copyLatestToTodayTooltip {
+    return Intl.message(
+      'Copiar la última a hoy',
+      name: 'copyLatestToTodayTooltip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eliminar esta fecha`
+  String get deleteThisDateTooltip {
+    return Intl.message(
+      'Eliminar esta fecha',
+      name: 'deleteThisDateTooltip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Activos`
+  String get assets {
+    return Intl.message('Activos', name: 'assets', desc: '', args: []);
+  }
+
+  /// `Pasivos`
+  String get liabilities {
+    return Intl.message('Pasivos', name: 'liabilities', desc: '', args: []);
+  }
+
+  /// `No hay elementos`
+  String get noItems {
+    return Intl.message(
+      'No hay elementos',
+      name: 'noItems',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Crear Entrada`
+  String get createEntryTitle {
+    return Intl.message(
+      'Crear Entrada',
+      name: 'createEntryTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fecha (AAAA-MM-DD)`
+  String get dateLabel {
+    return Intl.message(
+      'Fecha (AAAA-MM-DD)',
+      name: 'dateLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Activo`
+  String get asset {
+    return Intl.message('Activo', name: 'asset', desc: '', args: []);
+  }
+
+  /// `Pasivo`
+  String get liability {
+    return Intl.message('Pasivo', name: 'liability', desc: '', args: []);
+  }
+
+  /// `Activo`
+  String get activeLabel {
+    return Intl.message('Activo', name: 'activeLabel', desc: '', args: []);
+  }
+
+  /// `Corriente`
+  String get currentLabel {
+    return Intl.message('Corriente', name: 'currentLabel', desc: '', args: []);
+  }
+
+  /// `ID`
+  String get idLabel {
+    return Intl.message('ID', name: 'idLabel', desc: '', args: []);
+  }
+
+  /// `ej. propiedad_piso_centro`
+  String get idHint {
+    return Intl.message(
+      'ej. propiedad_piso_centro',
+      name: 'idHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Requerido`
+  String get requiredField {
+    return Intl.message('Requerido', name: 'requiredField', desc: '', args: []);
+  }
+
+  /// `Entidad`
+  String get entityLabel {
+    return Intl.message('Entidad', name: 'entityLabel', desc: '', args: []);
+  }
+
+  /// `ej. Piso en la Calle Principal`
+  String get entityHint {
+    return Intl.message(
+      'ej. Piso en la Calle Principal',
+      name: 'entityHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monto`
+  String get amountLabel {
+    return Intl.message('Monto', name: 'amountLabel', desc: '', args: []);
+  }
+
+  /// `ej. 150000.00`
+  String get amountHint {
+    return Intl.message(
+      'ej. 150000.00',
+      name: 'amountHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Número inválido`
+  String get invalidNumber {
+    return Intl.message(
+      'Número inválido',
+      name: 'invalidNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Divisa (ISO 4217)`
+  String get currencyLabel {
+    return Intl.message(
+      'Divisa (ISO 4217)',
+      name: 'currencyLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `EUR / USD / GBP`
+  String get currencyHint {
+    return Intl.message(
+      'EUR / USD / GBP',
+      name: 'currencyHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Código de 3 letras`
+  String get currencyValidator {
+    return Intl.message(
+      'Código de 3 letras',
+      name: 'currencyValidator',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Descripción`
+  String get descriptionLabel {
+    return Intl.message(
+      'Descripción',
+      name: 'descriptionLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notas opcionales`
+  String get descriptionHint {
+    return Intl.message(
+      'Notas opcionales',
+      name: 'descriptionHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Guardar`
+  String get save {
+    return Intl.message('Guardar', name: 'save', desc: '', args: []);
+  }
+
+  /// `Editar Elemento`
+  String get editItemTitle {
+    return Intl.message(
+      'Editar Elemento',
+      name: 'editItemTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eliminar Elemento`
+  String get deleteItemTitle {
+    return Intl.message(
+      'Eliminar Elemento',
+      name: 'deleteItemTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `¿Estás seguro de que quieres eliminar este elemento?`
+  String get deleteItemContent {
+    return Intl.message(
+      '¿Estás seguro de que quieres eliminar este elemento?',
+      name: 'deleteItemContent',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<SharedStrings> {

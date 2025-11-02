@@ -5,18 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9c7c0cc-a071-4f69-98a6-cbb15a712685" name="Changes" comment="Actualización de dependencias">
-      <change afterPath="$PROJECT_DIR$/lib/ui/screens/settings_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui/screens/stats_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ui/widgets/patriom_app_bar_actions.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/patriom_const.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/patriom_const.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/patriom_router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/patriom_router.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/l10n/generated/intl/messages_all.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/generated/intl/messages_all.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/l10n/generated/intl/messages_en.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/generated/intl/messages_en.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/l10n/generated/intl/messages_es.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/generated/intl/messages_es.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/l10n/generated/l10n.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/generated/l10n.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/l10n/intl_en.arb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/intl_en.arb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/l10n/intl_es.arb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/l10n/intl_es.arb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/screens/create_entry_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/create_entry_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ui/screens/edit_item_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/edit_item_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/ui/screens/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ui/screens/home_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
@@ -79,24 +75,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Flutter.main.dart.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Usuario/Desktop/Patriom&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Flutter.main.dart.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "8b949bf8",
+    "io.flutter.reload.alreadyRun": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Usuario/Desktop/Patriom",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c9c7c0cc-a071-4f69-98a6-cbb15a712685" name="Changes" comment="" />
