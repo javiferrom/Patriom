@@ -151,4 +151,69 @@ class PortfolioHistoryStorage {
     final model = await getModel();
     return _pretty.convert(model.toJson());
   }
+
+  static List<String> _sortedDatesDesc(PortfolioHistory m) {
+    final dates = m.history.map((e) => e.date).where((d) => d.isNotEmpty).toSet().toList();
+    dates.sort((a, b) => b.compareTo(a)); // newest first
+    return dates;
+  }
+
+  static Future<List<String>> getSortedDatesDesc() async {
+    final m = await getModel();
+    return _sortedDatesDesc(m);
+  }
+
+  static Future<void> deleteDate(String date) async {
+    final m = await getModel();
+    final filtered = m.history.where((e) => e.date != date).toList();
+    await overwriteModel(PortfolioHistory(history: filtered));
+  }
+
+  static Future<void> duplicateEntry(String fromDate, String toDate, {bool overwrite = false}) async {
+    final m = await getModel();
+    final src = m.entryByDate(fromDate);
+    if (src == null) return;
+    final destExists = m.entryByDate(toDate) != null;
+    if (destExists && !overwrite) return;
+
+    HistoryEntry cloned = HistoryEntry(
+      date: toDate,
+      assets: src.assets.map((it) => FinancialItem(
+        id: it.id,
+        active: it.active,
+        current: it.current,
+        entity: it.entity,
+        amount: it.amount,
+        currency: it.currency,
+        description: it.description,
+      )).toList(),
+      liabilities: src.liabilities.map((it) => FinancialItem(
+        id: it.id,
+        active: it.active,
+        current: it.current,
+        entity: it.entity,
+        amount: it.amount,
+        currency: it.currency,
+        description: it.description,
+      )).toList(),
+    );
+
+    final updated = m.upsertEntry(cloned);
+    await overwriteModel(updated);
+  }
+
+  static Future<String?> copyLatestToToday({bool overwrite = false}) async {
+    final m = await getModel();
+    final dates = _sortedDatesDesc(m);
+    if (dates.isEmpty) return null;
+    final latest = dates.first;
+
+    final now = DateTime.now();
+    final today = '${now.year.toString().padLeft(4, '0')}-${now.month.toString().padLeft(2, '0')}-${now.day.toString().padLeft(2, '0')}';
+
+    if (latest.compareTo(today) >= 0 && !overwrite) return null;
+
+    await duplicateEntry(latest, today, overwrite: overwrite);
+    return today;
+  }
 }
