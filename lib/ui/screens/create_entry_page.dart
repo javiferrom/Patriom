@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_auto_size_text/flutter_auto_size_text.dart';
 import 'package:patriom/core/portfolio_history.dart';
 import 'package:patriom/core/portfolio_history_storage.dart';
+import 'package:patriom/l10n/generated/l10n.dart';
 
 class CreateEntryPage extends StatefulWidget {
   const CreateEntryPage({super.key});
@@ -106,8 +107,10 @@ class _CreateEntryPageState extends State<CreateEntryPage> {
 
   @override
   Widget build(BuildContext context) {
+    final sharedStrings = SharedStrings.of(context);
+
     return Scaffold(
-      appBar: AppBar(title: const AutoSizeText('Create Entry')),
+      appBar: AppBar(title: AutoSizeText(sharedStrings.createEntryTitle)),
       body: SafeArea(
         child: Form(
           key: _formKey,
@@ -120,9 +123,9 @@ class _CreateEntryPageState extends State<CreateEntryPage> {
                     child: TextFormField(
                       controller: _dateCtrl,
                       readOnly: true,
-                      decoration: const InputDecoration(
-                        labelText: 'Date (YYYY-MM-DD)',
-                        border: OutlineInputBorder(),
+                      decoration: InputDecoration(
+                        labelText: sharedStrings.dateLabel,
+                        border: const OutlineInputBorder(),
                       ),
                       onTap: _pickDate,
                     ),
@@ -136,9 +139,9 @@ class _CreateEntryPageState extends State<CreateEntryPage> {
               ),
               const SizedBox(height: 16),
               SegmentedButton<bool>(
-                segments: const [
-                  ButtonSegment<bool>(value: true, label: Text('Asset')),
-                  ButtonSegment<bool>(value: false, label: Text('Liability')),
+                segments: [
+                  ButtonSegment<bool>(value: true, label: Text(sharedStrings.asset)),
+                  ButtonSegment<bool>(value: false, label: Text(sharedStrings.liability)),
                 ],
                 selected: {_isAsset},
                 onSelectionChanged: (s) => setState(() => _isAsset = s.first),
@@ -148,14 +151,14 @@ class _CreateEntryPageState extends State<CreateEntryPage> {
                 children: [
                   Expanded(
                     child: SwitchListTile(
-                      title: const Text('Active'),
+                      title: Text(sharedStrings.activeLabel),
                       value: _active,
                       onChanged: (v) => setState(() => _active = v),
                     ),
                   ),
                   Expanded(
                     child: SwitchListTile(
-                      title: const Text('Current'),
+                      title: Text(sharedStrings.currentLabel),
                       value: _current,
                       onChanged: (v) => setState(() => _current = v),
                     ),
@@ -165,38 +168,38 @@ class _CreateEntryPageState extends State<CreateEntryPage> {
               const SizedBox(height: 8),
               TextFormField(
                 controller: _idCtrl,
-                decoration: const InputDecoration(
-                  labelText: 'ID',
-                  hintText: 'e.g. property_downtown_flat',
-                  border: OutlineInputBorder(),
+                decoration: InputDecoration(
+                  labelText: sharedStrings.idLabel,
+                  hintText: sharedStrings.idHint,
+                  border: const OutlineInputBorder(),
                 ),
-                validator: (v) => (v == null || v.trim().isEmpty) ? 'Required' : null,
+                validator: (v) => (v == null || v.trim().isEmpty) ? sharedStrings.requiredField : null,
               ),
               const SizedBox(height: 12),
               TextFormField(
                 controller: _entityCtrl,
-                decoration: const InputDecoration(
-                  labelText: 'Entity',
-                  hintText: 'e.g. Flat on Main Street',
-                  border: OutlineInputBorder(),
+                decoration: InputDecoration(
+                  labelText: sharedStrings.entityLabel,
+                  hintText: sharedStrings.entityHint,
+                  border: const OutlineInputBorder(),
                 ),
-                validator: (v) => (v == null || v.trim().isEmpty) ? 'Required' : null,
+                validator: (v) => (v == null || v.trim().isEmpty) ? sharedStrings.requiredField : null,
               ),
               const SizedBox(height: 12),
               TextFormField(
                 controller: _amountCtrl,
                 keyboardType: const TextInputType.numberWithOptions(decimal: true, signed: false),
                 inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'[0-9.,]'))],
-                decoration: const InputDecoration(
-                  labelText: 'Amount',
-                  hintText: 'e.g. 150000.00',
-                  border: OutlineInputBorder(),
+                decoration: InputDecoration(
+                  labelText: sharedStrings.amountLabel,
+                  hintText: sharedStrings.amountHint,
+                  border: const OutlineInputBorder(),
                 ),
                 validator: (v) {
                   final text = (v ?? '').trim().replaceAll(',', '.');
                   final num? parsed = num.tryParse(text);
-                  if (text.isEmpty) return 'Required';
-                  if (parsed == null) return 'Invalid number';
+                  if (text.isEmpty) return sharedStrings.requiredField;
+                  if (parsed == null) return sharedStrings.invalidNumber;
                   return null;
                 },
               ),
@@ -205,15 +208,15 @@ class _CreateEntryPageState extends State<CreateEntryPage> {
                 controller: _currencyCtrl,
                 textCapitalization: TextCapitalization.characters,
                 maxLength: 3,
-                decoration: const InputDecoration(
-                  labelText: 'Currency (ISO 4217)',
-                  hintText: 'EUR / USD / GBP',
-                  border: OutlineInputBorder(),
+                decoration: InputDecoration(
+                  labelText: sharedStrings.currencyLabel,
+                  hintText: sharedStrings.currencyHint,
+                  border: const OutlineInputBorder(),
                   counterText: '',
                 ),
                 validator: (v) {
                   final t = (v ?? '').trim().toUpperCase();
-                  if (t.length != 3) return '3-letter code';
+                  if (t.length != 3) return sharedStrings.currencyValidator;
                   return null;
                 },
               ),
@@ -221,17 +224,17 @@ class _CreateEntryPageState extends State<CreateEntryPage> {
               TextFormField(
                 controller: _descriptionCtrl,
                 maxLines: 3,
-                decoration: const InputDecoration(
-                  labelText: 'Description',
-                  hintText: 'Optional notes',
-                  border: OutlineInputBorder(),
+                decoration: InputDecoration(
+                  labelText: sharedStrings.descriptionLabel,
+                  hintText: sharedStrings.descriptionHint,
+                  border: const OutlineInputBorder(),
                 ),
               ),
               const SizedBox(height: 20),
               FilledButton.icon(
                 onPressed: _save,
                 icon: const Icon(Icons.save),
-                label: const AutoSizeText('Save'),
+                label: AutoSizeText(sharedStrings.save),
               ),
             ],
           ),

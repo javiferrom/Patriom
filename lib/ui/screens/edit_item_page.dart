@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_auto_size_text/flutter_auto_size_text.dart';
 import 'package:patriom/core/portfolio_history.dart';
 import 'package:patriom/core/portfolio_history_storage.dart';
+import 'package:patriom/l10n/generated/l10n.dart';
 
 class EditItemPage extends StatefulWidget {
   final String date;
@@ -60,6 +61,26 @@ class _EditItemPageState extends State<EditItemPage> {
   }
 
   Future<void> _delete() async {
+    final sharedStrings = SharedStrings.of(context);
+    final confirm = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text(sharedStrings.deleteItemTitle),
+        content: Text(sharedStrings.deleteItemContent),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop(false),
+            child: Text(sharedStrings.cancel),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(ctx).pop(true),
+            child: Text(sharedStrings.delete),
+          ),
+        ],
+      ),
+    );
+    if (confirm != true) return;
+
     await PortfolioHistoryStorage.removeItem(widget.date, widget.originalId);
     if (!mounted) return;
     Navigator.of(context).pop(true);
@@ -96,8 +117,9 @@ class _EditItemPageState extends State<EditItemPage> {
 
   @override
   Widget build(BuildContext context) {
+    final sharedStrings = SharedStrings.of(context);
     return Scaffold(
-      appBar: AppBar(title: const AutoSizeText('Edit Item')),
+      appBar: AppBar(title: AutoSizeText(sharedStrings.editItemTitle)),
       body: SafeArea(
         child: Form(
           key: _formKey,
@@ -105,9 +127,9 @@ class _EditItemPageState extends State<EditItemPage> {
             padding: const EdgeInsets.all(16),
             children: [
               SegmentedButton<bool>(
-                segments: const [
-                  ButtonSegment<bool>(value: true, label: Text('Asset')),
-                  ButtonSegment<bool>(value: false, label: Text('Liability')),
+                segments: [
+                  ButtonSegment<bool>(value: true, label: Text(sharedStrings.asset)),
+                  ButtonSegment<bool>(value: false, label: Text(sharedStrings.liability)),
                 ],
                 selected: {_isAsset},
                 onSelectionChanged: (s) => setState(() => _isAsset = s.first),
@@ -117,14 +139,14 @@ class _EditItemPageState extends State<EditItemPage> {
                 children: [
                   Expanded(
                     child: SwitchListTile(
-                      title: const Text('Active'),
+                      title: Text(sharedStrings.activeLabel),
                       value: _active,
                       onChanged: (v) => setState(() => _active = v),
                     ),
                   ),
                   Expanded(
                     child: SwitchListTile(
-                      title: const Text('Current'),
+                      title: Text(sharedStrings.currentLabel),
                       value: _current,
                       onChanged: (v) => setState(() => _current = v),
                     ),
@@ -134,34 +156,34 @@ class _EditItemPageState extends State<EditItemPage> {
               const SizedBox(height: 12),
               TextFormField(
                 controller: _idCtrl,
-                decoration: const InputDecoration(
-                  labelText: 'ID',
-                  border: OutlineInputBorder(),
+                decoration: InputDecoration(
+                  labelText: sharedStrings.idLabel,
+                  border: const OutlineInputBorder(),
                 ),
-                validator: (v) => (v == null || v.trim().isEmpty) ? 'Required' : null,
+                validator: (v) => (v == null || v.trim().isEmpty) ? sharedStrings.requiredField : null,
               ),
               const SizedBox(height: 12),
               TextFormField(
                 controller: _entityCtrl,
-                decoration: const InputDecoration(
-                  labelText: 'Entity',
-                  border: OutlineInputBorder(),
+                decoration: InputDecoration(
+                  labelText: sharedStrings.entityLabel,
+                  border: const OutlineInputBorder(),
                 ),
-                validator: (v) => (v == null || v.trim().isEmpty) ? 'Required' : null,
+                validator: (v) => (v == null || v.trim().isEmpty) ? sharedStrings.requiredField : null,
               ),
               const SizedBox(height: 12),
               TextFormField(
                 controller: _amountCtrl,
                 keyboardType: const TextInputType.numberWithOptions(decimal: true),
                 inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'[0-9.,]'))],
-                decoration: const InputDecoration(
-                  labelText: 'Amount',
-                  border: OutlineInputBorder(),
+                decoration: InputDecoration(
+                  labelText: sharedStrings.amountLabel,
+                  border: const OutlineInputBorder(),
                 ),
                 validator: (v) {
                   final text = (v ?? '').trim().replaceAll(',', '.');
-                  if (text.isEmpty) return 'Required';
-                  if (num.tryParse(text) == null) return 'Invalid number';
+                  if (text.isEmpty) return sharedStrings.requiredField;
+                  if (num.tryParse(text) == null) return sharedStrings.invalidNumber;
                   return null;
                 },
               ),
@@ -170,14 +192,14 @@ class _EditItemPageState extends State<EditItemPage> {
                 controller: _currencyCtrl,
                 textCapitalization: TextCapitalization.characters,
                 maxLength: 3,
-                decoration: const InputDecoration(
-                  labelText: 'Currency',
+                decoration: InputDecoration(
+                  labelText: sharedStrings.currencyLabel,
                   counterText: '',
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                 ),
                 validator: (v) {
                   final t = (v ?? '').trim().toUpperCase();
-                  if (t.length != 3) return '3 letters';
+                  if (t.length != 3) return sharedStrings.currencyValidator;
                   return null;
                 },
               ),
@@ -185,22 +207,23 @@ class _EditItemPageState extends State<EditItemPage> {
               TextFormField(
                 controller: _descriptionCtrl,
                 maxLines: 3,
-                decoration: const InputDecoration(
-                  labelText: 'Description',
-                  border: OutlineInputBorder(),
+                decoration: InputDecoration(
+                  labelText: sharedStrings.descriptionLabel,
+                  border: const OutlineInputBorder(),
                 ),
               ),
               const SizedBox(height: 20),
               FilledButton.icon(
                 onPressed: _save,
                 icon: const Icon(Icons.save),
-                label: const AutoSizeText('Save'),
+                label: AutoSizeText(sharedStrings.save),
               ),
               const SizedBox(height: 12),
               OutlinedButton.icon(
+                style: OutlinedButton.styleFrom(foregroundColor: Colors.red),
                 onPressed: _delete,
                 icon: const Icon(Icons.delete_outline),
-                label: const AutoSizeText('Delete'),
+                label: AutoSizeText(sharedStrings.delete),
               ),
             ],
           ),

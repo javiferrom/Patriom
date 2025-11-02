@@ -87,5 +87,101 @@
         "example": "30.0"
       }
     }
-  }
+  },
+  "language": "Language",
+  "@language": {
+    "description": "Option to change the application language."
+  },
+  "spanish": "Spanish",
+  "@spanish": {
+    "description": "The Spanish language."
+  },
+  "english": "English",
+  "@english": {
+    "description": "The English language."
+  },
+  "nothingToCopy": "Nothing to copy (latest is already today)",
+  "@nothingToCopy": {},
+  "copiedToDate": "Copied to {date}",
+  "@copiedToDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteDateTitle": "Delete date",
+  "@deleteDateTitle": {},
+  "deleteDateContent": "Delete the entire collection for {date}?",
+  "@deleteDateContent": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "cancel": "Cancel",
+  "@cancel": {},
+  "delete": "Delete",
+  "@delete": {},
+  "noEntriesYet": "No entries yet",
+  "@noEntriesYet": {},
+  "noDate": "No date",
+  "@noDate": {},
+  "copyLatestToTodayTooltip": "Copy latest to today",
+  "@copyLatestToTodayTooltip": {},
+  "deleteThisDateTooltip": "Delete this date",
+  "@deleteThisDateTooltip": {},
+  "assets": "Assets",
+  "@assets": {},
+  "liabilities": "Liabilities",
+  "@liabilities": {},
+  "noItems": "No items",
+  "@noItems": {},
+  "createEntryTitle": "Create Entry",
+  "@createEntryTitle": {},
+  "dateLabel": "Date (YYYY-MM-DD)",
+  "@dateLabel": {},
+  "asset": "Asset",
+  "@asset": {},
+  "liability": "Liability",
+  "@liability": {},
+  "activeLabel": "Active",
+  "@activeLabel": {},
+  "currentLabel": "Current",
+  "@currentLabel": {},
+  "idLabel": "ID",
+  "@idLabel": {},
+  "idHint": "e.g. property_downtown_flat",
+  "@idHint": {},
+  "requiredField": "Required",
+  "@requiredField": {},
+  "entityLabel": "Entity",
+  "@entityLabel": {},
+  "entityHint": "e.g. Flat on Main Street",
+  "@entityHint": {},
+  "amountLabel": "Amount",
+  "@amountLabel": {},
+  "amountHint": "e.g. 150000.00",
+  "@amountHint": {},
+  "invalidNumber": "Invalid number",
+  "@invalidNumber": {},
+  "currencyLabel": "Currency (ISO 4217)",
+  "@currencyLabel": {},
+  "currencyHint": "EUR / USD / GBP",
+  "@currencyHint": {},
+  "currencyValidator": "3-letter code",
+  "@currencyValidator": {},
+  "descriptionLabel": "Description",
+  "@descriptionLabel": {},
+  "descriptionHint": "Optional notes",
+  "@descriptionHint": {},
+  "save": "Save",
+  "@save": {},
+  "editItemTitle": "Edit Item",
+  "@editItemTitle": {},
+  "deleteItemTitle": "Delete Item",
+  "@deleteItemTitle": {},
+  "deleteItemContent": "Are you sure you want to delete this item?",
+  "@deleteItemContent": {}
 }
